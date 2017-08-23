@@ -1,42 +1,57 @@
-#Created by Techett/Anthemius
+'''
 
-import random, sys, pyperclip
-#end of imports
+Coded by Techett
+passwordGen v0.02
+Last update: August 23, 2017
 
-print('Hello, who are you?')
-myName = input()
-print('Oh, hello ' + myName + '!')
-#end of greeting
+'''
 
-chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0987654321*&^%$#@!'
-#end of character list
+import random, sys, pyperclip, time
 
-number = 1
-number = int(1)
-#how many passwords to generate
+
+
+characters = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890!@#$%^&*"
+#Pull characters from this string
+
+
+
+#number = 1
+#number = int(1)
+#This is how many passwords will be created.
+
+
 
 length = 16
-length = int(16)
-#how long the password will be
+length = int(length)
+#This is how the length of the password is determined.
 
-for pwd in range(number):
-    password = ''
-    for c in range(length):
-        password += random.choice(chars)
-    pyperclip.copy(password)
-#end of random module
 
-print(myName + ', your password has been created.')
+
+for pwd in range(1):
+	password = ''
+	for c in range(length):
+		password += random.choice(characters)
+	pyperclip.copy(password)
+
+
+
+print("Your password has been generated.")
+print("Your password has been copied to your clipboard")
 print(password)
-print('Your password has been copied to your clipboard!')
-#end of notification
 
-answer = ''
+
+
+print("Verify your password!")
+print("Do so by right clicking the screen and then hit enter.")
+answer = input()
+
+
+
 while answer != password:
-    print('To close this program please paste the password and hit enter.')
-    print('Do so by right clicking the screen.')
-    answer = input()
+	print("To close this generator paste your password to confirm accuracy.")
+	print("Do so by simply right clicking the screen.")
 else:
-    print('Goodbye.')
-    sys.exit()
-#end of program close
+	print("That's it! Goodbye!")
+	print("This generator will now close.")
+	time.sleep(5)
+	sys.exit()
