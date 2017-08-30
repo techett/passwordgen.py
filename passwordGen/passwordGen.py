@@ -1,3 +1,4 @@
+
 '''
 
 Coded by Techett
@@ -50,6 +51,7 @@ answer = input()
 while answer != password:
 	print("To close this generator paste your password to confirm accuracy.")
 	print("Do so by simply right clicking the screen.")
+	answer = input()
 else:
 	print("That's it! Goodbye!")
 	print("This generator will now close.")
