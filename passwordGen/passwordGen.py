@@ -16,15 +16,31 @@ characters = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890!@#$
 
 
 
-#number = 1
-#number = int(1)
+print("How long should your password be?")
+length = input()
+length = int(length)
+
+
+
+while length >= 999 or length <= 8:     #Can't have short passwords
+    print("I don't think that's a good idea... try again.")
+    length = input()
+    length = int(length)
+
+
+'''
+number = 1
+number = int(1)
 #This is how many passwords will be created.
+'''
 
 
 
+'''
 length = 16
 length = int(length)
 #This is how the length of the password is determined.
+'''
 
 
 
